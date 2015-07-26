@@ -76,9 +76,9 @@ names(Subjects) <- c("subject")
 activity = Y$activity
 merged_data <- cbind(Subjects,activity,filteredX)
 
-# write my merged data set out without column names
+# write my merged data set out without row names
 #
-write.table(merged_data,"merged_data.txt", row.name = FALSE, quote = FALSE)
+write.table(merged_data,"merged_data.txt", row.names = FALSE, quote = FALSE)
 
 # create a tidy data set with the average of each variable for each activity and subject
 # Note: using melt and then dcast as show in lecture videos on reshaping data
@@ -100,7 +100,7 @@ shaped_data <- dcast(melted_data,subject + activity ~ variable, mean)
 
 # write our tidy data set out
 #
-write.table(shaped_data,"tidy_data.txt", row.name = FALSE, quote = FALSE)
+write.table(shaped_data,"tidy_data.txt", row.names = FALSE, quote = FALSE)
 
 
 

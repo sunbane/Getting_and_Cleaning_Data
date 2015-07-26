@@ -25,16 +25,16 @@ The script will perform the following operations:
 * Loads the activity labels and merges those labels onto the Y table
 * Adds appropriate column names to the Y and Subjects tables
 * Merges all tables together
-* Writes out the merged data set to disk (without column headers and quotes) as merged_data.txt
+* Writes out the merged data set to disk (without row names and quotes) as merged_data.txt
 * Uses reshape to melt the merged table by subject and activity
 * Uses reshape to dcast the data back together using the mean statistic (our tidy dataset)
-* Writes out the tidy data set to disk (without column headers and quotes) as tidy_data.txt
+* Writes out the tidy data set to disk (without row names and quotes) as tidy_data.txt
 
 At the end of the script running you will have:
 * A file named merged_data.txt containing all merged data for the desired variables
-* A data table in memory named merged_data which contains this same data with appropriate column headers
+* A data table in memory named merged_data which contains this same data 
 * A file named tidy_data.txt containing our tidy data set with one row for each subject and activity combination with the mean of the measurements
-* A data table in memory named shaped_data which contains this tidy data with appropriate column headers
+* A data table in memory named shaped_data which contains this tidy data 
 
 ## codebook.md
 There is a codebook in this repository that contains information on the variables included along with pertinent information named codebook.md
